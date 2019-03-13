@@ -215,6 +215,7 @@ public class HomeFragment extends BaseFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_services:
+                preferenceHelper.putScheduleOrder(null);
                 activityReference.initFragments(new ServiceFragment());
                 break;
             case R.id.tv_myProfile:
