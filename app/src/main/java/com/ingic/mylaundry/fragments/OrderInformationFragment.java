@@ -164,9 +164,11 @@ public class OrderInformationFragment extends BaseFragment implements Utils.Util
 //                                subTotalInstant = (Double.parseDouble(preferenceHelper.getSchedule().getPickupSurcharge()));
 //                            }
                             double total = Double.parseDouble(preferenceHelper.getStringPrefrence(AppConstant.TOTAL));
+                            double totalAmount = Double.parseDouble(preferenceHelper.getStringPrefrence(AppConstant.TOTAL));
                             double promoCoupon = couponsWrapper.getAmount();
 
-                            discount = ((total) + Double.parseDouble(pickupSurcharge)) * promoCoupon / 100;
+                            total = total + Double.parseDouble(pickupSurcharge);
+                            discount = (total * promoCoupon) / 100;
                             double totalAfterDis = total - discount;
                             vat = (totalAfterDis * 5) / 100;
                             double afterVatDiscount = vat + totalAfterDis;
@@ -179,7 +181,7 @@ public class OrderInformationFragment extends BaseFragment implements Utils.Util
 //                            double vatWithoutDiscount = (total * 5) / 100;
 //                            couponCodeDialoge = CouponCodeDialoge.newInstance(activityReference, couponsWrapper,   (total + vatWithoutDiscount) + "", Double.valueOf(pickupSurcharge),promoCoupon,subTotal);
                             couponCodeDialoge = CouponCodeDialoge.newInstance(activityReference, couponsWrapper,
-                                    total + "", pickupSurcharge, promoCoupon, afterVatDiscount,vat);
+                                    totalAmount + "", pickupSurcharge, promoCoupon, afterVatDiscount, vat);
 
                             couponCodeDialoge.show((activityReference).getSupportFragmentManager(), null);
 
@@ -221,12 +223,12 @@ public class OrderInformationFragment extends BaseFragment implements Utils.Util
 //                            double subTotal = (subTotalInstant - promoCoupon);
                             vat = (subTotal * 5) / 100;
                             subTotal += vat;
-                           // txtPayment.setText((getString(R.string.aed) + " " + subTotal) + "");
+                            // txtPayment.setText((getString(R.string.aed) + " " + subTotal) + "");
                             txtPayment.setText((getString(R.string.aed) + " " + vat) + "");
                             txtCheckoutPrice.setText((getString(R.string.aed) + " " + subTotal + ""));
 
                             couponCodeDialoge = CouponCodeDialoge.newInstance(activityReference, couponsWrapper,
-                                    totalAmount+"" ,pickupSurcharge, promoCoupon, subTotal,vat);
+                                    totalAmount + "", pickupSurcharge, promoCoupon, subTotal, vat);
 //                            double vatWithoutDiscount = (total * 5) / 100;
 //                            couponCodeDialoge = CouponCodeDialoge.newInstance(activityReference, couponsWrapper,   (total + vatWithoutDiscount) + "", Double.valueOf(pickupSurcharge),promoCoupon,subTotal);
 
