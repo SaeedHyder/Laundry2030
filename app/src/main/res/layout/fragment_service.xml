@@ -1,0 +1,146 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:clickable="true"
+    android:orientation="vertical"
+    tools:context="com.ingic.mylaundry.fragments.ServiceFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x15"
+        android:layout_marginTop="@dimen/x20"
+        android:text="@string/select_services_type"
+        android:textColor="@color/skipText_color" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x20"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/x15"
+        android:paddingStart="@dimen/x15">
+
+        <RadioButton
+            android:id="@+id/radio_dry"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_selector"
+            android:button="@null"
+            android:checked="true"
+            android:drawablePadding="@dimen/x6"
+            android:drawableTop="@drawable/dry"
+            android:gravity="center"
+            android:paddingBottom="@dimen/x10"
+            android:paddingTop="@dimen/x20"
+
+            android:text="@string/dry_clean"
+            android:textColor="@drawable/text_color_selector"
+            android:textSize="@dimen/s12" />
+
+        <RadioButton
+            android:id="@+id/radio_steam"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/x12"
+            android:layout_weight="1"
+            android:background="@drawable/bg_selector"
+            android:button="@null"
+
+            android:drawablePadding="@dimen/x6"
+            android:drawableTop="@drawable/iron"
+            android:gravity="center"
+            android:paddingBottom="@dimen/x10"
+            android:paddingLeft="@dimen/x2"
+            android:paddingRight="@dimen/x2"
+            android:paddingTop="@dimen/x20"
+
+            android:text="@string/steam_ironing"
+            android:textColor="@drawable/text_color_selector"
+            android:textSize="@dimen/s12" />
+
+        <RadioButton
+            android:id="@+id/radio_wash"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/x12"
+            android:layout_weight="1"
+            android:background="@drawable/bg_selector"
+
+            android:button="@null"
+            android:drawablePadding="@dimen/x6"
+            android:drawableTop="@drawable/wash"
+            android:gravity="center"
+            android:paddingBottom="@dimen/x10"
+            android:paddingTop="@dimen/x20"
+            android:text="@string/wash_amp_iron"
+            android:textColor="@drawable/text_color_selector"
+            android:textSize="@dimen/s12" />
+
+
+    </RadioGroup>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh_service"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView_Services"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layoutAnimation="@anim/layout_animation_right_slide"
+            android:paddingTop="@dimen/x16">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_Total"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x45"
+        android:background="@color/color_button"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/x16"
+        android:paddingStart="@dimen/x16">
+
+        <TextView
+            android:id="@+id/txtTotalName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/total"
+            android:textColor="@color/color_white" />
+
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginStart="@dimen/x4"
+            android:gravity="end|center"
+            android:text="@string/aed"
+            android:textColor="@color/color_white" />
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableEnd="@drawable/bottom_arrow"
+            android:drawablePadding="@dimen/x10"
+            android:gravity="end|center"
+            android:paddingStart="@dimen/x7"
+            android:text="AED 0"
+            android:textColor="@color/color_white" />
+    </LinearLayout>
+
+</LinearLayout>

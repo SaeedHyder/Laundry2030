@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="@dimen/x5"
+    android:gravity="center_vertical"
+    android:paddingTop="@dimen/x5">
+
+    <TextView
+        android:id="@+id/txtNameQuantity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".75"
+        android:textColor="@color/color_grey"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/_2_x_shirt"
+        android:textSize="@dimen/s13" />
+
+    <TextView
+        android:id="@+id/txtPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".25"
+        android:text="@string/aed_15"
+        android:textColor="@color/color_button"
+        android:textSize="@dimen/s13" />
+</LinearLayout>

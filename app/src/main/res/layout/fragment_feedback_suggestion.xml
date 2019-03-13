@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/x40"
+    tools:context="com.ingic.mylaundry.fragments.FeedbackSuggestionFragment">
+
+    <EditText
+        android:id="@+id/et_feedback"
+        android:hint="Enter your detail here"
+        android:gravity="top"
+        android:padding="@dimen/x15"
+        android:textSize="@dimen/s14"
+
+        android:background="@drawable/rounded_white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x300" />
+
+    <Button
+        android:id="@+id/btn_done"
+        style="@style/loginbutton"
+        android:layout_marginEnd="@dimen/x0"
+        android:layout_marginStart="@dimen/x0"
+        android:text="@string/done"
+        android:textColor="@color/color_white" />
+
+</LinearLayout>

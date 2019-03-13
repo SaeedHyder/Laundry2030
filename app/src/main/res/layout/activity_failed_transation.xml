@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_splash" />
+
+    <TextView
+        android:id="@+id/text_payment_result2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Transaction Failed."
+        android:textAlignment="center"
+        android:textColor="#ff0000"
+        android:textSize="20dp" />
+
+    <Button
+        style="@style/loginbutton"
+        android:layout_marginEnd="@dimen/x20"
+        android:layout_marginStart="@dimen/x20"
+        android:onClick="closeWindow"
+        android:text="close" />
+</LinearLayout>

@@ -1,0 +1,233 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:clickable="true"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context="com.ingic.mylaundry.fragments.ScheduleFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x20">
+
+            <TextView
+                android:id="@+id/tv_instantOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/x20"
+                android:layout_weight="1"
+                android:drawableEnd="@drawable/question_mark"
+                android:text="@string/instant_order"
+                android:textColor="@color/skipText_color" />
+
+            <CheckBox
+                android:id="@+id/chkInstant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/setting_selector"
+                android:checked="false" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:background="@color/color_seprater" />
+
+        <TextView
+            android:id="@+id/tv_headersection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_seprater"
+            android:padding="@dimen/x8"
+            android:paddingStart="@dimen/x15"
+            android:text="@string/pickup_schedule"
+            android:textColor="@color/skipText_color"
+            android:textSize="@dimen/s15" />
+
+        <com.ingic.mylaundry.customViews.CustomTextInputLayout
+            android:id="@+id/pickupAddressInputLayout"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_marginStart="@dimen/x20">
+
+            <TextView
+                android:id="@+id/tv_schedulePickupAddres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/right_arrow"
+                android:drawablePadding="@dimen/x8"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:layout_marginTop="@dimen/x10"
+                android:hint="@string/select_pickup_address"
+                android:maxLines="2"
+                android:paddingBottom="@dimen/x10"
+                android:paddingTop="@dimen/x18"
+                android:textColor="@color/skipText_color"
+                android:textColorHint="@color/skipText_color" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/color_seprater" />
+        </com.ingic.mylaundry.customViews.CustomTextInputLayout>
+
+        <com.ingic.mylaundry.customViews.CustomTextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/x13"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_marginStart="@dimen/x20">
+
+            <TextView
+                android:id="@+id/tv_schedulePickupDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/pickup_date"
+                android:drawablePadding="@dimen/x8"
+                android:paddingBottom="@dimen/x10"
+                android:paddingTop="@dimen/x18"
+                android:text="@string/select_pickup_date"
+
+                android:textColor="@color/skipText_color" />
+
+            <View
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/color_seprater" />
+        </com.ingic.mylaundry.customViews.CustomTextInputLayout>
+
+        <com.ingic.mylaundry.customViews.CustomTextInputLayout
+            android:id="@+id/PickupTimeInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_marginStart="@dimen/x20">
+
+            <TextView
+                android:id="@+id/tv_schedulePickupTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/down_arrow"
+                android:drawablePadding="@dimen/x8"
+                android:hint="@string/pickupTime"
+                android:paddingBottom="@dimen/x10"
+                android:paddingTop="@dimen/x18"
+                android:textColor="@color/skipText_color"
+                android:textColorHint="@color/skipText_color" />
+
+            <View
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/color_seprater" />
+        </com.ingic.mylaundry.customViews.CustomTextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_headersectiondelivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x40"
+            android:background="@color/color_seprater"
+            android:padding="@dimen/x8"
+            android:paddingStart="@dimen/x15"
+            android:text="@string/delivery_schedule"
+            android:textColor="@color/skipText_color"
+            android:textSize="@dimen/s15" />
+
+        <com.ingic.mylaundry.customViews.CustomTextInputLayout
+            android:id="@+id/pickupDeliveryInputLayout"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_marginStart="@dimen/x20">
+
+            <TextView
+                android:id="@+id/tv_scheduleDeliveryAddres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/right_arrow"
+                android:drawablePadding="@dimen/x8"
+                android:hint="@string/select_delivery_address"
+                android:paddingBottom="@dimen/x10"
+                android:paddingTop="@dimen/x18"
+                android:textColor="@color/skipText_color"
+                android:textColorHint="@color/skipText_color" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/color_seprater" />
+        </com.ingic.mylaundry.customViews.CustomTextInputLayout>
+
+        <com.ingic.mylaundry.customViews.CustomTextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/x13"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_marginStart="@dimen/x20">
+
+            <TextView
+                android:id="@+id/tv_scheduleDeliveryDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/pickup_date"
+                android:drawablePadding="@dimen/x8"
+                android:paddingBottom="@dimen/x10"
+                android:paddingTop="@dimen/x18"
+                android:text="@string/select_delivery_date"
+                android:textColor="@color/skipText_color" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/color_seprater" />
+        </com.ingic.mylaundry.customViews.CustomTextInputLayout>
+
+        <com.ingic.mylaundry.customViews.CustomTextInputLayout
+            android:id="@+id/DeliveryTimeInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_marginStart="@dimen/x20">
+
+            <TextView
+                android:id="@+id/tv_scheduleDeliveryTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/down_arrow"
+                android:drawablePadding="@dimen/x8"
+                android:hint="@string/delivery_time_slot"
+                android:inputType="number"
+                android:paddingBottom="@dimen/x10"
+                android:paddingTop="@dimen/x18"
+                android:textColor="@color/skipText_color"
+                android:textColorHint="@color/skipText_color" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/color_seprater" />
+        </com.ingic.mylaundry.customViews.CustomTextInputLayout>
+
+        <Button
+            android:id="@+id/btn_saveAddress"
+            style="@style/loginbutton"
+            android:text="@string/save" />
+
+    </LinearLayout>
+
+</ScrollView>

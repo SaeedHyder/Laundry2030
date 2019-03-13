@@ -1,0 +1,337 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:fillViewport="true"
+    tools:context="com.ingic.mylaundry.fragments.AddPickupAddressFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtSelectAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x18"
+            android:layout_marginTop="@dimen/x20"
+            android:text="@string/select_address_type"
+            android:textColor="@color/skipText_color" />
+
+        <RadioGroup
+            android:id="@+id/radiogroup_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x20"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/x15"
+            android:paddingStart="@dimen/x15">
+
+            <RadioButton
+                android:id="@+id/radio_home"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/x110"
+                android:layout_weight="1"
+                android:background="@drawable/bg_selector"
+                android:button="@null"
+                android:checked="true"
+                android:drawableTop="@drawable/home"
+                android:gravity="center"
+                android:paddingTop="@dimen/x20"
+                android:text="@string/home"
+                android:textColor="@drawable/text_color_selector" />
+
+            <RadioButton
+                android:id="@+id/radio_office"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/x110"
+                android:layout_marginStart="@dimen/x12"
+                android:layout_weight="1"
+                android:background="@drawable/bg_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/office"
+                android:gravity="center"
+                android:paddingTop="@dimen/x20"
+                android:text="@string/office"
+                android:textColor="@drawable/text_color_selector" />
+
+            <RadioButton
+                android:id="@+id/radio_other"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/x110"
+                android:layout_marginStart="@dimen/x12"
+                android:layout_weight="1"
+                android:background="@drawable/bg_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/location"
+                android:gravity="center"
+                android:paddingTop="@dimen/x20"
+                android:text="@string/other"
+                android:textColor="@drawable/text_color_selector" />
+
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_marginStart="@dimen/x20"
+            android:orientation="vertical">
+
+            <com.ingic.mylaundry.customViews.CustomTextInputLayout
+                android:id="@+id/locationInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/address"
+                    android:ellipsize="end"
+                    android:hint="@string/location"
+                    android:maxLines="1"
+                    android:paddingBottom="@dimen/x10"
+                    android:paddingTop="@dimen/x25"
+                    android:textColor="@color/skipText_color"
+                    android:textSize="@dimen/s14" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="@color/color_midgray" />
+            </com.ingic.mylaundry.customViews.CustomTextInputLayout>
+
+            <com.ingic.mylaundry.customViews.CustomTextInputLayout
+                android:id="@+id/streetNameInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_streetName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:hint="@string/street_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="99"
+                    android:nextFocusForward="@id/et_buildingName"
+                    android:paddingBottom="@dimen/x10"
+                    android:paddingTop="@dimen/x25"
+                    android:singleLine="true"
+                    android:textColor="@color/skipText_color"
+                    android:textSize="@dimen/s14" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="@color/color_midgray" />
+            </com.ingic.mylaundry.customViews.CustomTextInputLayout>
+
+            <com.ingic.mylaundry.customViews.CustomTextInputLayout
+                android:id="@+id/buildingNameInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_buildingName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:hint="@string/building_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="99"
+                    android:nextFocusForward="@id/et_floor"
+                    android:paddingBottom="@dimen/x10"
+                    android:paddingTop="@dimen/x25"
+                    android:singleLine="true"
+                    android:textColor="@color/skipText_color"
+                    android:textSize="@dimen/s14" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="@color/color_midgray" />
+            </com.ingic.mylaundry.customViews.CustomTextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/x14"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et_floor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:hint="@string/floor_optional"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:nextFocusForward="@id/et_apartment"
+                        android:paddingBottom="@dimen/x10"
+                        android:paddingTop="@dimen/x25"
+                        android:singleLine="true"
+                        android:textColor="@color/skipText_color"
+                        android:textSize="@dimen/s14" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x1"
+                        android:background="@color/color_midgray" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x14"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et_apartment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:hint="@string/apartment_optional"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:paddingBottom="@dimen/x10"
+                        android:paddingTop="@dimen/x25"
+                        android:singleLine="true"
+
+                        android:textColor="@color/skipText_color"
+                        android:textSize="@dimen/s14" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x1"
+                        android:background="@color/color_midgray" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_nearestLandmark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ellipsize="end"
+                android:hint="@string/nearest_landmark_optional"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLength="50"
+                android:paddingBottom="@dimen/x10"
+                android:paddingTop="@dimen/x25"
+                android:singleLine="true"
+                android:textColor="@color/skipText_color"
+                android:textSize="@dimen/s14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/color_midgray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/x14"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:enabled="false"
+                        android:hint="@string/city"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:nextFocusForward="@id/et_country"
+                        android:paddingBottom="@dimen/x10"
+                        android:paddingTop="@dimen/x25"
+                        android:singleLine="true"
+                        android:textColor="@color/skipText_color"
+                        android:textSize="@dimen/s14" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x1"
+                        android:background="@color/color_midgray" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x14"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:enabled="false"
+                        android:hint="@string/country"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:paddingBottom="@dimen/x10"
+                        android:paddingTop="@dimen/x25"
+                        android:singleLine="true"
+                        android:textColor="@color/skipText_color"
+                        android:textSize="@dimen/s14" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x1"
+                        android:background="@color/color_midgray" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_marginStart="@dimen/x0"
+                android:layout_marginEnd="@dimen/x0"
+                android:id="@+id/btn_saveAddress"
+                style="@style/loginbutton"
+                android:text="@string/save_address" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

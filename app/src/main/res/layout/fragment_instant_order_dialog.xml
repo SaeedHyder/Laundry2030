@@ -1,0 +1,15 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@drawable/rounded_white"
+    tools:context="com.ingic.mylaundry.ui.InstantOrderDialog">
+
+<TextView
+    android:textColor="@color/skipText_color"
+    android:gravity="center"
+    android:text="Please Instant Order..."
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x160" />
+</LinearLayout>

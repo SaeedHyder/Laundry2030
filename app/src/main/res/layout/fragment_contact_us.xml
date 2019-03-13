@@ -1,0 +1,84 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ingic.mylaundry.fragments.ContactUsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x110"
+            android:src="@drawable/password_logo" />
+
+        <TextView
+            android:id="@+id/tv_contactusTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x30"
+            android:gravity="center_horizontal"
+            android:paddingEnd="@dimen/x30"
+            android:paddingStart="@dimen/x30"
+            android:text="@string/please_feel_free_to_contact_us_for_any_enquiries_on_the_option_below"
+            android:textColor="@color/skipText_color"
+            android:textSize="@dimen/x16" />
+
+        <TextView
+            android:singleLine="true"
+            android:textIsSelectable="true"
+            android:id="@+id/tv_contact"
+            style="@style/contactus"
+            android:drawableStart="@drawable/contact"
+            android:drawablePadding="@dimen/x14" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:background="@color/color_midgray" />
+
+        <TextView
+            android:id="@+id/tv_infoEmail"
+            style="@style/contactus"
+            android:ellipsize="end"
+            android:drawableStart="@drawable/email_contact"
+            android:drawablePadding="@dimen/x14" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:background="@color/color_midgray" />
+
+        <TextView
+            android:id="@+id/tv_feedback"
+            style="@style/contactus"
+            android:drawableStart="@drawable/feedback"
+            android:drawablePadding="@dimen/x14"
+            android:text="@string/feedback_and_suggestions" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:background="@color/color_midgray" />
+
+        <TextView
+            android:id="@+id/tv_reportAnIssue"
+            style="@style/contactus"
+            android:drawableStart="@drawable/report"
+            android:drawablePadding="@dimen/x14"
+            android:text="@string/report_an_issue" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:background="@color/color_midgray" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>

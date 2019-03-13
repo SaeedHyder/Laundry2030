@@ -1,0 +1,354 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+
+    tools:context="com.ingic.mylaundry.fragments.OrderTrackingStatusFragment">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x7"
+            android:layout_marginTop="@dimen/x19"
+            android:layout_marginEnd="@dimen/x33"
+            android:layout_marginStart="@dimen/x33" />
+
+        <LinearLayout
+            android:layout_marginEnd="@dimen/x5"
+            android:layout_marginStart="@dimen/x5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_place"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/circle_indicator_color" />
+
+                <TextView
+
+                    android:id="@+id/txt_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x10"
+                    android:gravity="center"
+                    android:text="@string/order_placed"
+                    android:textColor="@color/skipText_color"
+                    android:textSize="@dimen/s11" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginStart="@dimen/x2"
+                android:layout_marginEnd="@dimen/x2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_pending"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/circle_indicator_unselected" />
+
+                <TextView
+
+                    android:id="@+id/txt_pending"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/x10"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/order_pending"
+                    android:textColor="@color/skipText_color"
+                    android:textSize="@dimen/s11" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginStart="@dimen/x2"
+                android:layout_marginEnd="@dimen/x2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_process"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/circle_indicator_unselected" />
+
+                <TextView
+
+                    android:id="@+id/txt_pickup"
+                    android:layout_marginTop="@dimen/x10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/pickup_process"
+                    android:textColor="@color/skipText_color"
+                    android:textSize="@dimen/s11" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/x2"
+                android:layout_marginEnd="@dimen/x2"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_laundry_process"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/circle_indicator_unselected" />
+
+                <TextView
+
+                    android:id="@+id/laundryProcess"
+                    android:layout_marginTop="@dimen/x10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/laundry_in_process"
+                    android:textColor="@color/skipText_color"
+                    android:textSize="@dimen/s11"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/x2"
+                android:layout_marginEnd="@dimen/x2"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_delivery_process"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/circle_indicator_unselected" />
+
+                <TextView
+
+                    android:id="@+id/delivery"
+                    android:layout_marginTop="@dimen/x10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/delivery_process"
+                    android:textColor="@color/skipText_color"
+                    android:textSize="@dimen/s11"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/x2"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_completed"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/circle_indicator_unselected" />
+
+                <TextView
+
+                    android:id="@+id/txt_complete"
+                    android:layout_marginTop="@dimen/x10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/order_complete"
+                    android:textColor="@color/skipText_color"
+                    android:textSize="@dimen/s11" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x10"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/x10"
+        android:paddingEnd="@dimen/x30"
+        android:paddingStart="@dimen/x30"
+        android:paddingTop="@dimen/x40"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/image_orderPlace"
+            android:layout_width="@dimen/x12"
+            android:layout_height="@dimen/x12"
+            android:scaleType="fitXY"
+            android:src="@drawable/circle_indicator_unselected" />
+
+        <ImageView
+            android:id="@+id/image_orderPlaceline"
+            android:layout_width="@dimen/x60"
+            android:layout_height="wrap_content"
+            android:src="@drawable/line" />
+
+        <ImageView
+            android:id="@+id/image_orderPending"
+            android:layout_width="@dimen/x12"
+            android:layout_height="@dimen/x12"
+            android:scaleType="fitXY"
+            android:src="@drawable/circle_indicator_unselected" />
+
+        <ImageView
+            android:id="@+id/image_orderPendingline"
+            android:layout_width="@dimen/x60"
+            android:layout_height="wrap_content"
+            android:src="@drawable/line" />
+
+        <ImageView
+            android:id="@+id/image_pickupProcess"
+            android:layout_width="@dimen/x12"
+            android:layout_height="@dimen/x12"
+            android:scaleType="fitXY"
+            android:src="@drawable/circle_indicator_unselected" />
+
+        <ImageView
+            android:id="@+id/image_pickupProcessline"
+            android:layout_width="@dimen/x60"
+            android:layout_height="wrap_content"
+            android:src="@drawable/line" />
+
+        <ImageView
+            android:id="@+id/image_deliveryProcess"
+            android:layout_width="@dimen/x12"
+            android:layout_height="@dimen/x12"
+            android:scaleType="fitXY"
+            android:src="@drawable/circle_indicator_unselected" />
+
+        <ImageView
+            android:id="@+id/image_deliveryProcessline"
+            android:layout_width="@dimen/x60"
+            android:layout_height="wrap_content"
+            android:src="@drawable/line" />
+
+        <ImageView
+            android:id="@+id/image_orderComplete"
+            android:layout_width="@dimen/x12"
+            android:layout_height="@dimen/x12"
+            android:scaleType="fitXY"
+            android:src="@drawable/circle_indicator_unselected" />
+
+
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="@dimen/x10"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:visibility="gone">-->
+
+    <!--<TextView-->
+
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="0.2"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/order_placed"-->
+    <!--android:textColor="@color/skipText_color"-->
+    <!--android:textSize="@dimen/s13" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="0.2"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/order_pending"-->
+    <!--android:textColor="@color/skipText_color"-->
+    <!--android:textSize="@dimen/s13" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="0.2"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/pickup_process"-->
+    <!--android:textColor="@color/skipText_color"-->
+    <!--android:textSize="@dimen/s13" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="0.2"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/delivery_process"-->
+    <!--android:textColor="@color/skipText_color"-->
+    <!--android:textSize="@dimen/s13" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="0.2"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/order_complete"-->
+    <!--android:textColor="@color/skipText_color"-->
+    <!--android:textSize="@dimen/s13" />-->
+
+    <!--</LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/x50"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/image_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/place_circle" />
+
+    </LinearLayout>
+
+</LinearLayout>

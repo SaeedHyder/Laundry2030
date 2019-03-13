@@ -1,0 +1,157 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:fillViewport="true"
+    tools:context="com.ingic.mylaundry.fragments.MyProfileFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+
+        android:layout_marginTop="@dimen/x25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/x140"
+            android:layout_height="@dimen/x140"
+            android:layout_gravity="center"
+            android:background="@color/color_white"
+            android:padding="@dimen/x4"
+            android:src="@drawable/person_placeholder"
+            app:civ_border_color="@color/color_white"
+            app:civ_border_width="@dimen/x4" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/image_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/profile_image"
+            android:layout_alignRight="@+id/profile_image"
+            android:layout_marginEnd="@dimen/x10"
+            android:paddingBottom="@dimen/x10"
+            android:src="@drawable/camera_with_circle" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="@dimen/x20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_marginStart="@dimen/x20"
+            android:text="@string/full_name"
+            android:textColor="@color/color_profileText"
+            android:textSize="@dimen/s12" />
+        <TextView
+            android:id="@+id/tv_fullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_marginTop="@dimen/x6"
+            android:background="@null"
+            android:textColor="@color/skipText_color"
+            android:textSize="@dimen/s16" />
+        <View
+            android:layout_marginTop="@dimen/x10"
+            android:background="@color/color_seprater"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/x10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_marginStart="@dimen/x20"
+            android:text="@string/email_address"
+            android:textColor="@color/color_profileText"
+            android:textSize="@dimen/s12" />
+        <TextView
+            android:id="@+id/tv_emailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_marginTop="@dimen/x6"
+            android:background="@null"
+            android:textColor="@color/skipText_color"
+            android:textSize="@dimen/s16" />
+        <View
+            android:layout_marginTop="@dimen/x10"
+            android:background="@color/color_seprater"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/x10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_marginStart="@dimen/x20"
+            android:text="@string/Address"
+            android:textColor="@color/color_profileText"
+            android:textSize="@dimen/s12" />
+        <TextView
+            android:id="@+id/tv_Address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_marginTop="@dimen/x6"
+            android:background="@null"
+            android:textColor="@color/skipText_color"
+            android:textSize="@dimen/s16" />
+        <View
+            android:layout_marginTop="@dimen/x10"
+            android:background="@color/color_seprater"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/x10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_marginStart="@dimen/x20"
+            android:text="@string/mobile_number"
+            android:textColor="@color/color_profileText"
+            android:textSize="@dimen/s12" />
+        <TextView
+            android:id="@+id/tv_mobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_marginTop="@dimen/x6"
+            android:background="@null"
+            android:textColor="@color/skipText_color"
+            android:textSize="@dimen/s16" />
+        <View
+            android:layout_marginTop="@dimen/x10"
+            android:background="@color/color_seprater"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

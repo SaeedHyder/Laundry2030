@@ -1,0 +1,195 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/x10"
+    android:background="@drawable/rounded_white"
+    android:orientation="vertical"
+    tools:context="com.ingic.mylaundry.ui.CouponCodeDialoge">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/x8"
+        android:layout_marginTop="@dimen/x8"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home_logo" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/bg_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x11"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/x12"
+        android:paddingStart="@dimen/x12">
+
+        <TextView
+            android:id="@+id/tv_subtotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/sub_total"
+            android:textColor="@color/skipText_color" />
+
+        <TextView
+            android:id="@+id/txtSubTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="100 AED"
+            android:textColor="@color/color_button" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_surcharge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/x11"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/x12"
+        android:paddingStart="@dimen/x12">
+
+        <TextView
+            android:id="@+id/txt_instanceSurcharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/surcharge"
+            android:textColor="@color/skipText_color" />
+
+        <TextView
+            android:id="@+id/txtSurcharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="80 AED"
+            android:textColor="@color/color_button" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x11"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/x12"
+        android:paddingStart="@dimen/x12">
+
+        <TextView
+            android:id="@+id/tv_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/discount"
+            android:textColor="@color/skipText_color" />
+
+        <TextView
+            android:id="@+id/txtPromoCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="-12%"
+            android:textColor="@color/color_button" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:layout_marginTop="@dimen/x10"
+        android:background="@color/bg_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x11"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/x12"
+        android:paddingStart="@dimen/x12">
+
+        <TextView
+            android:id="@+id/tv_vat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/payment_vat"
+            android:textColor="@color/skipText_color" />
+
+        <TextView
+            android:id="@+id/txtVat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="80 AED"
+            android:textColor="@color/color_button" />
+
+    </LinearLayout>
+
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:layout_marginTop="@dimen/x10"
+        android:background="@color/bg_gray"/>
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x11"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/x12"
+        android:paddingStart="@dimen/x12">
+
+        <TextView
+            android:id="@+id/tv_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/payment"
+            android:textColor="@color/skipText_color" />
+
+        <TextView
+            android:id="@+id/txtPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="80 AED"
+            android:textColor="@color/color_button" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_marginBottom="@dimen/x10"
+        android:background="@color/bg_gray"/>
+
+
+    <Button
+        android:id="@+id/btn_CouponOk"
+        style="@style/loginbutton"
+        android:paddingBottom="@dimen/x9"
+        android:paddingTop="@dimen/x9"
+        android:text="@string/ok" />
+
+</LinearLayout>

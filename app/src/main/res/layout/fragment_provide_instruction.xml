@@ -1,0 +1,159 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/color_white"
+    tools:context="com.ingic.mylaundry.fragments.ProvideInstructionFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/fold_my_clothes" />
+
+            <CheckBox
+                android:id="@+id/chkfold"
+                android:button="@drawable/setting_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:background="@color/color_seprater" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/leave_it_at_my_door" />
+
+            <CheckBox
+                android:id="@+id/chkatDoor"
+                android:button="@drawable/setting_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:background="@color/color_seprater" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/call_me_before" />
+
+            <CheckBox
+                android:id="@+id/chkCallPickup"
+                android:button="@drawable/setting_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:background="@color/color_seprater" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/call_me_before_delivery" />
+
+            <CheckBox
+                android:id="@+id/chkCallDelivery"
+                android:button="@drawable/setting_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:background="@color/color_seprater" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/save_this_configuration" />
+
+            <CheckBox
+                android:id="@+id/chksave"
+                android:button="@drawable/setting_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:background="@color/color_seprater" />
+
+        <EditText
+            android:id="@+id/txtInstruction"
+            android:textColor="@color/skipText_color"
+            android:textSize="@dimen/s16"
+            android:padding="@dimen/x10"
+            android:inputType="text"
+            android:imeOptions="actionDone"
+            android:maxLines="6"
+            android:gravity="start"
+            android:hint="@string/other_instructions"
+            android:layout_marginStart="@dimen/x30"
+            android:layout_marginEnd="@dimen/x30"
+            android:layout_marginTop="@dimen/x30"
+            android:background="@drawable/rounded_white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x170" />
+
+        <Button
+
+            android:id="@+id/btn_saveInstruction"
+            style="@style/loginbutton"
+            android:text="@string/save_instructions" />
+
+    </LinearLayout>
+
+</ScrollView>

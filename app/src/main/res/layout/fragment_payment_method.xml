@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_white"
+    android:padding="@dimen/x20"
+    android:clickable="true"
+    tools:context="com.ingic.mylaundry.fragments.PaymentMethodFragment">
+
+    <TextView
+        android:id="@+id/tv_payByCard"
+        android:padding="@dimen/x20"
+        android:background="@drawable/rounded_white"
+        android:drawableEnd="@drawable/right_arrow"
+        android:text="@string/pay_by_credit_debit_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_cashOnDelivery"
+        android:layout_marginTop="@dimen/x20"
+        android:padding="@dimen/x20"
+        android:background="@drawable/rounded_white"
+        android:drawableEnd="@drawable/right_arrow"
+        android:text="@string/cash_on_delivery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

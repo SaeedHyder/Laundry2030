@@ -1,0 +1,256 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    tools:context="com.ingic.mylaundry.fragments.SignupFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_splash" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x38"
+            android:layout_marginStart="@dimen/x38"
+            android:layout_marginTop="@dimen/x60"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.ingic.mylaundry.customViews.CustomTextInputLayout
+                android:id="@+id/nameInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/x14"
+                    android:drawableStart="@drawable/name"
+                    android:hint="@string/name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:maxLength="25"
+                    android:paddingBottom="@dimen/x10"
+                    android:paddingStart="@dimen/x8"
+                    android:singleLine="true"
+                    android:textColor="@color/skipText_color"
+                    android:textColorHint="@color/skipText_color"
+                    android:textSize="@dimen/s16" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="@color/color_midgray" />
+            </com.ingic.mylaundry.customViews.CustomTextInputLayout>
+
+            <com.ingic.mylaundry.customViews.CustomTextInputLayout
+                android:id="@+id/emailInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/x20"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/x14"
+                    android:drawableStart="@drawable/email"
+                    android:hint="@string/email_address"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:paddingBottom="@dimen/x10"
+                    android:paddingStart="@dimen/x8"
+                    android:textColor="@color/skipText_color"
+                    android:textColorHint="@color/skipText_color"
+                    android:textSize="@dimen/s16" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="@color/color_midgray" />
+            </com.ingic.mylaundry.customViews.CustomTextInputLayout>
+
+            <com.ingic.mylaundry.customViews.CustomTextInputLayout
+                android:id="@+id/passwordInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/x20"
+                    android:background="@null"
+                    android:digits="@string/password_space"
+                    android:drawablePadding="@dimen/x14"
+                    android:drawableStart="@drawable/pass"
+                    android:hint="@string/password"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLength="30"
+                    android:singleLine="true"
+                    android:paddingBottom="@dimen/x10"
+                    android:paddingStart="@dimen/x8"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/skipText_color"
+                    android:textColorHint="@color/skipText_color"
+                    android:textSize="@dimen/s16" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="@color/color_midgray" />
+            </com.ingic.mylaundry.customViews.CustomTextInputLayout>
+
+            <com.ingic.mylaundry.customViews.CustomTextInputLayout
+                android:id="@+id/confirmPasswordInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_confirmPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/x20"
+                    android:background="@null"
+                    android:digits="@string/password_space"
+                    android:drawablePadding="@dimen/x14"
+                    android:drawableStart="@drawable/pass"
+                    android:hint="@string/confirm_password"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLength="30"
+                    android:singleLine="true"
+                    android:paddingBottom="@dimen/x10"
+                    android:paddingStart="@dimen/x8"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/skipText_color"
+                    android:textColorHint="@color/skipText_color"
+                    android:textSize="@dimen/s16" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="@color/color_midgray" />
+            </com.ingic.mylaundry.customViews.CustomTextInputLayout>
+
+            <com.ingic.mylaundry.customViews.CustomTextInputLayout
+
+                android:id="@+id/mobileInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:id="@+id/tv_editNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:drawablePadding="@dimen/x14"
+                        android:drawableStart="@drawable/mobile_num"
+                        android:hint="@string/code"
+                        android:maxLines="1"
+                        android:paddingBottom="@dimen/x2"
+                        android:paddingRight="@dimen/x8"
+                        android:paddingTop="@dimen/x12"
+                        android:textColor="@color/skipText_color"
+                        android:textColorHint="@color/skipText_color"
+                        android:textSize="@dimen/s16" />
+
+                    <EditText
+
+                        android:id="@+id/et_mobileNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x10"
+                        android:background="@null"
+                        android:hint="@string/mobile_number"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:paddingBottom="@dimen/x10"
+                        android:paddingTop="@dimen/x20"
+                        android:singleLine="true"
+                        android:textColor="@color/skipText_color"
+                        android:textColorHint="@color/skipText_color"
+                        android:textSize="@dimen/s16" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="@color/color_midgray" />
+
+            </com.ingic.mylaundry.customViews.CustomTextInputLayout>
+
+            <Button
+                android:id="@+id/btn_signUp"
+                style="@style/loginbutton"
+                android:text="@string/signup"
+                android:layout_marginStart="@dimen/x0"
+                android:layout_marginEnd="@dimen/x0"
+                android:textColor="@color/color_white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/x5"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/x20"
+                android:paddingLeft="@dimen/x12"
+                android:paddingStart="@dimen/x12">
+
+                <CheckBox
+                    android:id="@+id/chkboxTermCondition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:button="@drawable/chehckbox_selector"
+                    android:paddingLeft="@dimen/x5"
+                    android:text="@string/i_accept_the"
+                    android:textColor="@color/Text_color"
+                    android:textSize="@dimen/x12" />
+
+                <TextView
+                    android:id="@+id/txtTermandCondition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x2"
+                    android:layout_marginStart="@dimen/x2"
+                    android:text="@string/terms_conditions"
+                    android:textColor="@color/Text_color"
+                    android:textSize="@dimen/x12" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

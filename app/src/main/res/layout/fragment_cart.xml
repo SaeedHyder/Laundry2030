@@ -1,0 +1,239 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:clickable="true"
+    android:orientation="vertical"
+    tools:context="com.ingic.mylaundry.fragments.CartFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_cart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+
+            android:paddingStart="@dimen/x10"
+            android:paddingEnd="@dimen/x10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:layout_marginBottom="@dimen/x16"
+
+                android:layout_marginTop="@dimen/x16"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/wash_fold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/x10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtDryClean"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="@string/dry_clean"
+                        android:textColor="@color/cart_heading_color"
+                        android:textSize="@dimen/s17" />
+
+                    <com.ingic.mylaundry.helpers.ExpandedRecyclerView
+                        android:id="@+id/recyclerView_cart_dryClean"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="0dp">
+
+                    </com.ingic.mylaundry.helpers.ExpandedRecyclerView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/color_seprater" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/x16"
+                android:layout_marginTop="@dimen/x16"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/iron_cart" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/x10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtStreamIroning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="@string/steam_ironing"
+                        android:textColor="@color/cart_heading_color"
+                        android:textSize="@dimen/s17" />
+
+                    <com.ingic.mylaundry.helpers.ExpandedRecyclerView
+                        android:id="@+id/recyclerView_cart_steamIron"
+                        android:layout_width="match_parent" android:layout_weight="1"
+                        android:layout_height="0dp">
+
+                    </com.ingic.mylaundry.helpers.ExpandedRecyclerView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/color_seprater" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/x16"
+                android:layout_marginTop="@dimen/x16"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/wash_iron" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/x10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtWashIron"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="@string/wash_amp_iron"
+                        android:textColor="@color/cart_heading_color"
+                        android:textSize="@dimen/s17" />
+
+                    <com.ingic.mylaundry.helpers.ExpandedRecyclerView
+                        android:id="@+id/recyclerView_WashIron"
+                        android:layout_width="match_parent" android:layout_weight="1"
+                        android:layout_height="0dp">
+
+                    </com.ingic.mylaundry.helpers.ExpandedRecyclerView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x1"
+                android:background="@color/color_seprater" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/x18"
+        android:paddingTop="@dimen/x18">
+
+        <TextView
+            android:id="@+id/tvPriice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_40_00_aed"
+            android:textColor="@color/color_button"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_cartDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x6"
+            android:text="@string/needed_to_reach_minimum_order"
+            android:textColor="@color/cart_heading_color" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCart"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x45"
+        android:background="@color/color_button"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/x16"
+        android:paddingStart="@dimen/x16">
+
+        <TextView
+            android:id="@+id/txt_total"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/total"
+            android:textColor="@color/color_white" />
+
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="@dimen/x10"
+            android:text="AED 0"
+            android:drawableEnd="@drawable/bottom_arrow"
+            android:gravity="end|center"
+            android:textColor="@color/color_white" />
+    </LinearLayout>
+
+</LinearLayout>

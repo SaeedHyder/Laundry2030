@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.ingic.mylaundry.fragments.ForgotPinFragment">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x110"
+        android:src="@drawable/password_logo" />
+
+    <TextView
+        android:id="@+id/txtEnterCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x14"
+        android:gravity="center"
+        android:text="@string/enter_code"
+        android:textColor="@color/Text_color"
+        android:textSize="@dimen/s25"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtcodehere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/x12"
+        android:layout_marginStart="@dimen/x12"
+        android:layout_marginTop="@dimen/x10"
+        android:gravity="center"
+        android:text="@string/enter_your_4_digit_code_here"
+        android:textColor="@color/skipText_color"
+        android:textSize="@dimen/s13" />
+
+    <com.ingic.mylaundry.customViews.CustomTextInputLayout
+        android:gravity="center_horizontal"
+        android:id="@+id/pinInputLayout"
+        android:layout_width="@dimen/x210"
+        android:layout_height="wrap_content">
+
+        <com.ingic.mylaundry.helpers.PinEntryEditText
+            android:id="@+id/pinView"
+            android:layout_width="@dimen/x210"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x80"
+            android:layout_marginRight="@dimen/x80"
+            android:layout_marginTop="@dimen/x26"
+            android:cursorVisible="false"
+            android:textDirection="ltr"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:textColor="@color/skipText_color"
+            android:textColorLink="@color/skipText_color"
+            android:textIsSelectable="false"
+            android:textSize="@dimen/x20"
+            app:pinLineColors="@color/skipText_color" />
+
+    </com.ingic.mylaundry.customViews.CustomTextInputLayout>
+
+    <TextView
+        android:id="@+id/txtcodetimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/x12"
+        android:layout_marginStart="@dimen/x12"
+        android:layout_marginTop="@dimen/x10"
+        android:gravity="center"
+        android:text="@string/didn_t_get_a_code_yet_wait_for_3_43_seconds"
+        android:textColor="@color/skipText_color"
+        android:textSize="@dimen/s13" />
+
+    <TextView
+        android:id="@+id/txt_resendCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resend_code"
+        android:textColor="@color/color_button"
+        android:textSize="@dimen/s16"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <Button
+
+        android:id="@+id/btn_resetPassword"
+        style="@style/loginbutton"
+        android:text="@string/submit" />
+
+</LinearLayout>

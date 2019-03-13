@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_white"
+    android:orientation="vertical"
+
+    tools:context="com.ingic.mylaundry.ui.PickupTimeDialog">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/x10"
+        android:text="@string/set_pick_up"
+        android:textColor="@color/color_button"
+        android:textSize="@dimen/s16"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/color_lightgray" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x14"
+        android:layout_marginTop="@dimen/x18"
+        android:text="@string/time"
+        android:textColor="@color/skipText_color"
+        android:textSize="@dimen/s16"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/reyclerView_pickUpTime"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x250"
+        android:layout_margin="@dimen/x8">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

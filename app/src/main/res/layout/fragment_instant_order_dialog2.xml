@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x350"
+    android:layout_margin="@dimen/x10"
+    android:background="@drawable/rounded_white"
+    android:orientation="vertical"
+    tools:context="com.ingic.mylaundry.ui.InstantOrderDialog">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/x8"
+        android:layout_marginTop="@dimen/x8"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home_logo" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/bg_gray" />
+
+    <TextView
+        android:textColor="@color/skipText_color"
+        android:id="@+id/txt_instantOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/x10" />
+
+
+</LinearLayout>

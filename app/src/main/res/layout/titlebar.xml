@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@drawable/header"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/mTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Thank you"
+            android:textSize="@dimen/x16"
+            android:visibility="visible" />
+
+        <ImageView
+
+            android:id="@+id/logoImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:src="@drawable/home_logo" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/x10"
+                android:src="@drawable/back_btn" />
+
+            <TextView
+                android:padding="@dimen/x10"
+                android:id="@+id/txtArabic"
+                android:text="@string/arabic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/relativeNotiCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView_bell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/x10"
+                    android:src="@drawable/bell" />
+
+                <TextView
+                    android:id="@+id/txtNotiCount"
+                    android:layout_width="@dimen/x13"
+                    android:layout_height="@dimen/x13"
+                    android:layout_alignRight="@id/imageView_bell"
+                    android:layout_marginEnd="@dimen/x6"
+                    android:layout_marginTop="@dimen/x5"
+                    android:background="@drawable/circle_indicator_color"
+                    android:gravity="center"
+                    android:maxLength="3"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/x6"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relativeCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x5"
+                    android:padding="@dimen/x10"
+                    android:src="@drawable/cart" />
+
+                <TextView
+                    android:layout_marginTop="@dimen/x5"
+                    android:id="@+id/txtCartCount"
+                    android:layout_width="@dimen/x13"
+                    android:layout_height="@dimen/x13"
+                    android:visibility="visible"
+                    android:layout_marginEnd="@dimen/x6"
+                    android:layout_alignRight="@id/imageView_cart"
+                    android:gravity="center"
+                    android:background="@drawable/circle_indicator_color"
+                    android:maxLength="2"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/s6"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <ImageView
+
+                android:id="@+id/imageView_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x5"
+                android:padding="@dimen/x10"
+                android:visibility="gone"
+                android:src="@drawable/edit" />
+
+            <ImageView
+                android:id="@+id/imageView_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x5"
+                android:padding="@dimen/x10"
+                android:visibility="gone"
+                android:src="@drawable/add_icon" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

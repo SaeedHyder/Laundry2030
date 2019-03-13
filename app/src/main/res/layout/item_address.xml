@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutAddress"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/x7"
+    android:layout_marginEnd="@dimen/x15"
+    android:layout_marginStart="@dimen/x15"
+    android:layout_marginTop="@dimen/x15"
+    android:background="@drawable/rounded_white"
+    android:orientation="vertical"
+    android:padding="@dimen/x10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/check_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@drawable/radio_selector"
+            android:paddingLeft="@dimen/x8"
+            android:text="@string/ship_to_my_delivery_address"
+            android:textColor="@color/skipText_color" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_shipAddress"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="0.9"-->
+        <!--android:drawablePadding="@dimen/x8"-->
+        <!--android:text="@string/ship_to_my_delivery_address" />-->
+
+        <ImageView
+            android:id="@+id/imageView_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x5"
+            android:src="@drawable/edit_address" />
+
+    </LinearLayout>
+
+    <TextView
+
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/x24"
+        android:layout_marginStart="@dimen/x20"
+        android:text="@string/sheikh_khalifa_bin_salman_highway_199_manama_bahrain"
+        android:textColor="@color/Text_color"
+        android:textSize="@dimen/s15" />
+
+</LinearLayout>
